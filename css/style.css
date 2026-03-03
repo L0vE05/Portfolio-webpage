@@ -1,17 +1,48 @@
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
     background-color: black;
 }
 
 
 .header{
+    display: flex;
+    justify-content: space-between;
     background-color: darkgray;
-    padding-bottom: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.titleWrapper{
+    margin-left: 4.5%;
 }
 
 .myName{
     color: white;
-    font-size: 1.5em;
+    font-size: 1.7em;
+}
+
+.myTitle{
+    color: white;
+    font-size: 1.2em;
+}
+
+.navBar{
+    display: flex;
+    justify-content:space-evenly;
+    width: 40%;
+}
+
+.navText{
+    color: white;
+    font-size: 1.3em;
 }
 
 
