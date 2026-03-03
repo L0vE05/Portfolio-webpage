@@ -1,0 +1,21 @@
+
+body{
+    background-color: black;
+}
+
+
+.header{
+    background-color: darkgray;
+    padding-bottom: 5%;
+}
+
+.myName{
+    color: white;
+    font-size: 1.5em;
+}
+
+
+.bigBoi{
+    margin-top: 100%;
+    background-color: chartreuse;
+}
