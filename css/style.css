@@ -12,6 +12,11 @@ body{
 }
 
 
+.flex{
+    display: flex;
+}
+
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -47,6 +52,41 @@ body{
 
 
 .bigBoi{
-    margin-top: 100%;
+    margin-top: 50%;
     background-color: chartreuse;
+}
+
+
+.footer{
+    background-color: darkgray;
+    padding-top: 1.5%;
+    padding-bottom: 2.5%;
+    text-align: center;
+}
+
+.footerContactWrapper{
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactInfo{
+    text-decoration: underline;
+    font-size: 1.1em;
+    margin-bottom: 5%;
+    margin-right: 4%;
+}
+
+.infoText{
+    font-size: 1.1em;
+}
+
+.contactLinks{
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.linkIcon{
+    width: 15%;
 }
