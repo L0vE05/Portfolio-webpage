@@ -5,7 +5,7 @@ const footer = document.querySelector('.footer')
 window.addEventListener('load', function () {
     header.innerHTML = `
     <div class="titleWrapper">
-        <h1 class="myName">Love Erlandsson</h1>
+        <a href="index.html" class="noDecor"><h1 class="myName">Love Erlandsson</h1></a>
         <p class="myTitle">Game Programmer</p>
     </div>
     <div class="navBar">

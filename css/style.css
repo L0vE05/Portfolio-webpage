@@ -11,6 +11,14 @@ body{
     background-color: black;
 }
 
+p{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
 
 .flex{
     display: flex;
@@ -20,11 +28,23 @@ body{
     text-decoration: none;
 }
 
+.fullScreen{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vW;
+    height: 100vh;
+}
 
+
+/*-- HEADER --*/
 .header{
     display: flex;
+    position: fixed;
+    top: 0%;
+    width: 100%;
     justify-content: space-between;
-    background-color: darkgray;
+    background-color: rgba(169, 169, 169, 0.856);
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
@@ -55,12 +75,38 @@ body{
 }
 
 
+/*-- content --*/
+#teaserVideo{
+    z-index: -1;
+}
+
+.introductionWrapper{
+    position: absolute;
+    top: 35vh;
+    left: 15vW;
+    width: 25vw;
+    background-color: rgba(41, 35, 35, 0.781);
+    padding: 1%;
+    border-radius: 5%;
+}
+
+.aboutHeader{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+}
+
+.aboutText{
+    font-size: 1.1em;
+}
+
 .bigBoi{
     margin-top: 50%;
     background-color: chartreuse;
 }
 
 
+/*-- footer --*/
 .footer{
     background-color: darkgray;
     padding-top: 1.5%;
@@ -80,6 +126,7 @@ body{
     font-size: 1.1em;
     margin-bottom: 5%;
     margin-right: 4%;
+    color: black;
 }
 
 .infoText{
