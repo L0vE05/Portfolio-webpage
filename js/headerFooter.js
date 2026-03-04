@@ -1,6 +1,6 @@
 
-const header = document.querySelector('.header')
-const footer = document.querySelector('.footer')
+const header = document.getElementById('header')
+const footer = document.getElementById('footer')
 
 window.addEventListener('load', function () {
     header.innerHTML = `
@@ -40,4 +40,20 @@ window.addEventListener('load', function () {
         </div>
     </div>`
 })
+
+
+window.onscroll = function() {
+    if (this.document.documentElement.scrollTop > 50)
+    {
+        header.style.paddingTop = "1%"
+        header.style.paddingBottom = "1%"
+        header.style.borderBottomStyle = "solid"
+    }
+    else
+    {
+        header.style.paddingTop = "2.5%"
+        header.style.paddingBottom = "2.5%"
+        header.style.borderBottomStyle = "none"
+    }
+}
 

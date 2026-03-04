@@ -52,15 +52,17 @@ h2{
 
 
 /*-- HEADER --*/
-.header{
+#header{
     display: flex;
     position: fixed;
     top: 0%;
     width: 100%;
     justify-content: space-between;
-    background-color: rgba(169, 169, 169, 0.856);
+    background-color: rgba(169, 169, 169, 0.85);
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+    transition: 0.4s;
+    border-bottom-color: rgba(2, 3, 53, 0.85);
 }
 
 .titleWrapper{
@@ -121,7 +123,7 @@ h2{
 
 
 /*-- footer --*/
-.footer{
+#footer{
     background-color: darkgray;
     padding-top: 1.5%;
     padding-bottom: 2.5%;
