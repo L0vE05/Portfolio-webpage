@@ -9,9 +9,9 @@ window.addEventListener('load', function () {
         <p class="myTitle">Game Programmer</p>
     </div>
     <div class="navBar">
-        <p class="navText">Home</p>
+        <a class="navText" href="index.html">Home</a>
         <p class="navText">Projects</p>
-        <p class="navText">About me</p>
+        <a class="navText" href="aboutMe.html">About me</a>
     </div>`
 
     footer.innerHTML = `
