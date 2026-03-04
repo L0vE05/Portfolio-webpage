@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
     </div>`
 
     footer.innerHTML = `
-    <h2>Contact me</h2>
+    <h2 class="underline">Contact me</h2>
     <div class="footerContactWrapper">
         <div>
             <div class="flex">

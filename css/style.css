@@ -23,13 +23,6 @@
 body{
     background-color: black;
     font-family: 'courierPrime', 'Timer New Roman';
-}
-
-p{
-    color: white;
-}
-
-h2{
     color: white;
 }
 
@@ -50,6 +43,10 @@ h2{
     height: 100vh;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 
 /*-- HEADER --*/
 #header{
@@ -63,6 +60,7 @@ h2{
     padding-bottom: 2.5%;
     transition: 0.4s;
     border-bottom-color: rgba(2, 3, 53, 0.85);
+    z-index: 5;
 }
 
 .titleWrapper{
@@ -71,7 +69,8 @@ h2{
 
 .myName{
     color: white;
-    font-size: 1.7em;
+    font-size: 2em;
+    text-decoration: underline;
 }
 
 .myTitle{
@@ -92,6 +91,10 @@ h2{
 
 
 /*-- content --*/
+.introductionBody{
+    padding-bottom: 100vh;
+}
+
 #teaserVideo{
     z-index: -1;
 }
@@ -103,7 +106,7 @@ h2{
     width: 25vw;
     background-color: rgba(41, 35, 35, 0.781);
     padding: 1%;
-    border-radius: 5%;
+    border-radius: 1.5rem;
 }
 
 .aboutHeader{
@@ -115,6 +118,25 @@ h2{
 .aboutText{
     font-size: 1.1em;
 }
+
+.sectionHeader{
+    text-decoration: underline;
+}
+
+.projectsBody{
+    margin-top: 8vh;
+    text-align: center;
+}
+
+.project{
+    background-color: blueviolet;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .bigBoi{
     margin-top: 50%;
