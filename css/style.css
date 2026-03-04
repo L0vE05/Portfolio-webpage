@@ -7,8 +7,22 @@
 }
 
 
+/*-- Fonts --*/
+@font-face {
+    font-family: courierPrime;
+    src: url(../Assets/Fonts/CourierPrime/CourierPrime-Regular.ttf);
+}
+
+@font-face {
+    font-family: courierPrime;
+    src: url(../Assets/Fonts/CourierPrime/CourierPrime-Bold.ttf);
+    font-weight: bold;
+}
+
+
 body{
     background-color: black;
+    font-family: 'courierPrime', 'Timer New Roman';
 }
 
 p{
