@@ -90,7 +90,7 @@ body{
 }
 
 
-/*-- content --*/
+/*-- Introduction --*/
 .introductionBody{
     padding-bottom: 100vh;
 }
@@ -124,34 +124,49 @@ body{
     font-size: 1.1em;
 }
 
+
+/*-- Projects --*/
 .sectionHeader{
     text-decoration: underline;
 }
 
 .projectsBody{
+    margin: 0 auto;
     margin-top: 8vh;
     text-align: center;
+    width: 70vw;
 }
 
 .project{
-    background-color: blueviolet;
-    width: 50%;
     margin: 0 auto;
     margin-top: 5vh;
-    display: flex;
+    padding: 2%;
     justify-content: space-between;
+    width: 40%;
+    border: solid rgba(169, 169, 169, 0.85) 0.1vw;
+    border-radius: 2rem;
+    background-color:rgba(41, 35, 35)
+}
+
+.projectThumbnail{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.projectInfoSection{
+    margin-top: 5%;
 }
 
 
 .bigBoi{
     margin-top: 50%;
-    background-color: chartreuse;
 }
 
 
 /*-- footer --*/
 #footer{
     background-color: darkgray;
+    margin-top: 5vh;
     padding-top: 1.5%;
     padding-bottom: 2.5%;
     text-align: center;
