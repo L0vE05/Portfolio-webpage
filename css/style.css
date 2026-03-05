@@ -47,6 +47,10 @@ body{
     text-decoration: underline;
 }
 
+.show{
+    display: block;
+}
+
 
 /*-- HEADER --*/
 #header{
@@ -87,6 +91,11 @@ body{
 .navText{
     color: white;
     font-size: 1.3em;
+}
+
+.dropdownMenu{
+    background-color: chartreuse;
+    padding: 10px;
 }
 
 

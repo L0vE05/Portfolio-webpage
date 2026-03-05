@@ -1,3 +1,4 @@
+// ▼ ►
 
 const header = document.getElementById('header')
 const footer = document.getElementById('footer')
@@ -10,7 +11,18 @@ window.addEventListener('load', function () {
     </div>
     <div class="navBar">
         <a class="navText" href="index.html">Home</a>
-        <p class="navText">Projects</p>
+        <div>
+            <div class="flex">
+                <a class="navText underline">Projects</a>
+                <p style="font-size: 0.5em; margin-top: 5%">▼</p>
+            </div>
+            <div class="dropdownMenu">
+                <div class="dropdownElement">
+                    <a>Drop down link</a>
+                    <a>Another epic</a>
+                </div>
+            </div>
+        </div>
         <a class="navText" href="aboutMe.html">About me</a>
     </div>`
 
