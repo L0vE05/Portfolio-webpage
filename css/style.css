@@ -172,10 +172,6 @@ a{
 
 
 /*-- Front page projects --*/
-.sectionHeader{
-    text-decoration: underline;
-}
-
 .projectsBody{
     margin: 0 auto;
     margin-top: 8vh;
@@ -297,6 +293,15 @@ a{
 .sectionColumn{
     width: 50%;
     padding: 2%;
+}
+
+.sectionHeader{
+    font-size: 1.8em;
+    margin-bottom: 1vh;
+}
+
+.bodyText{
+    font-size: 1.2em;
 }
 
 
