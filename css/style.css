@@ -320,7 +320,7 @@ a{
 }
 
 .bodyText{
-    font-size: 1.2em;
+    font-size: 1.18em;
     color: rgb(199, 199, 199);
     line-height: 1.25em;;
 }
@@ -357,6 +357,12 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 3%;
+}
+
+.fullWidthSection{
+    width: 100%;
+    padding: 3%;
+    text-align: center;
 }
 
 
