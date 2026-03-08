@@ -129,7 +129,124 @@
         </div>
     </div>
 
-    <div class="bigBoi"></div>
+    <div class="projectSection">
+        <div class="flex">
+            <div class="sectionColumn">
+                <h2 class="sectionHeader">Pathfinding</h2>
+                <p class="bodyText">
+                    With the navigation volume in place I could implement the pathfinding algorithm.
+                    I decided to use the A* pathfinding algorithm since it works no matter how many dimensions you have, and because I used it during our pathfinding assignment.<br><br>
+                    A* works by opening the start node and looking at its neighbors. The neighbors are then sorted into a list depending on their score.
+                    The score is calculated by estimating the distance to the finish node using a heuristic function, and the distance needed to get to the neighbor from the start.
+                    The opened node is then set as the “parent” of the neighbor node.<br>
+                    If the node’s score was already calculated, but the new score is better, it will instead point to the new node.<br>
+                    Then the node with the lowest score is opened and its neighbors calculated.<br><br>
+                    This continues until the goal node is reached, where it will backtrack using the parent node pointers.
+                    The backtrack creates the path with the lowest score, which is the shortest.
+                </p>
+            </div>
+            <div class="sectionColumn">
+                <div class="imageWrapper" style="margin-bottom: 4vh;">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/Path1.png">
+                    <p class="imageText">Path found by the algorithm</p>
+                </div>
+                <div class="imageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/PathShowOpened.png">
+                    <p class="imageText">Yellow lines are opened nodes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectSection">
+        <div class="flex">
+            <div class="sectionColumn">
+                <div class="imageWrapper" style="margin-top: 10vh;">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/PathingTimes.png">
+                    <p class="imageText">Measured time (random paths).<br>From top; Navigation volume, A*, Theta*, Post Processed A*</p>
+                </div>
+            </div>
+            <div class="sectionColumn">
+                <h2 class="sectionHeader">Modifying the algorithm</h2>
+                <p class="bodyText">
+                    Normal A* creates a path that zic-zacks between nodes in a not so optimal way. To fix this I looked into an algorithm called Theta*.<br>
+                    Theta* is the same as A*, except it checks if the opened node’s parent has line of sight with the neighbor.
+                    If it does, the opened node’s parent is set as the parent of the neighbor as well.<br>
+                    This algorithm gave very nice and straight lines. But I used a line trace to make the line of sight check, which is not a very fast operation.
+                    So my Theta* implementation ended up being much slower than normal A*.<br><br>
+                    But I had new ideas. I made another algorithm, the same as A*.
+                    But when backtracking I made line of sight checks, like Theta*, to keep the parent node if the new one could see it.<br>
+                    This gave paths that were almost as good as the Theta* implementation, while being just a tiny bit slower than the normal A* implementation.<br>
+                    I don’t know if it has an actual name, or if this is just Theta* and I had misunderstood, but I called it “Post processed A*”.
+                </p>
+            </div>
+        </div>
+
+        <div class="sectionRowBorder">
+            <div class="imageRow">
+                <div class="rowImageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/ExampleAStar.png">
+                    <p class="imageText">Normal A*</p>
+                </div>
+                <div class="rowImageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/ExampleThetaStar.png">
+                    <p class="imageText">Theta*</p>
+                </div>
+                <div class="rowImageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/ExamplePostProcessed.png">
+                    <p class="imageText">Post processed A*</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectSection">
+        <div class="flex">
+            <div class="sectionColumn">
+                <h2 class="sectionHeader">Navigating agent</h2>
+                <p class="bodyText">
+                    What good is a pathfinding algorithm without something to follow the paths? Meet the Sphere, my brave test subject.<br><br>
+                    To make it follow paths nicely it needs to modify what the algorithm spits out slightly.
+                    Since itself and the target does not have to be in the middle of a node the start and end points are switched out to the current and target position.
+                    A line of sight check is also done to see if the target is actually reachable.<br>
+                    This had the unintended side effect of allowing the agent to go outside of the navigation volume, as long as there are no obstacles.<br><br>
+                    I also made it able to follow the player by finding a new path after a small amount of time. Not super fancy, but it ended up working surprisingly well.
+                </p>
+            </div>
+            <div class="sectionColumn">
+                <div class="imageWrapper" style="margin-bottom: 4vh;">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/FollowingInside.gif">
+                    <p class="imageText">Toggling between normal and post processed A*</p>
+                </div>
+                <div class="imageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/PathingOutside.gif">
+                    <p class="imageText">Same as before but showing the path</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectSection">
+        <div class="flex">
+            <div class="sectionColumn">
+                <div class="imageWrapper">
+                    <img class="projectBodyImage" src="../Assets/Images/Pathing/PathSmoothing.gif">
+                    <p class="imageText">Path smoothing in action (purple line shows target)</p>
+                </div>
+            </div>
+            <div class="sectionColumn">
+                <h2 class="sectionHeader">Path smoothing</h2>
+                <p class="bodyText">
+                    While the agent can take straight paths through the terrain, it still takes very sharp and unnatural corners.
+                    I only had a few days, but I wanted to give it a shot either way.<br><br>
+                    My idea was to have the agent look some distance ahead on the path it was following.
+                    If the way wasn’t obstructed it would target where it was looking instead of the old target. This made it take corners much smoother.<br><br>
+                    It works most of the time, but has some flaws I didn’t have time to iron out.
+                    It will still take sharp corners if it’s too close to an obstacle, and if the obstacle is way too close it will not be able to update its target and get stuck targeting its own position.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <footer id="footer"></footer>
 </body>

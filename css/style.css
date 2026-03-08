@@ -287,7 +287,7 @@ a{
 .projectSection{
     padding: 0%;
     margin: 0 auto;
-    margin-top: 7.5vh;
+    margin-top: 9vh;
     width: 80vw;
 }
 
@@ -304,6 +304,8 @@ a{
     content: "";
     position: absolute;
     width: 70vw;
+    left: 50%;
+    transform: translateX(-50%);
     border-top: solid rgb(187, 255, 124) 1px;
 }
 
@@ -318,19 +320,33 @@ a{
     line-height: 1.25em;;
 }
 
-.imageWrapper{
+.imageWrapper, .rowImageWrapper{
     justify-content: center;
     text-align: center;
 }
 
+.rowImageWrapper{
+    padding-left: 0.5%;
+}
+
+.rowImageWrapper:first-child{
+    padding-left: 0%;
+}
+
 .projectBodyImage{
     max-width: 100%;
-    max-height: 50vh;
+    max-height: 40vh;
 }
 
 .imageText{
     font-size: 0.9em;
     color: rgb(199, 199, 199);
+}
+
+.imageRow{
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
 }
 
 
