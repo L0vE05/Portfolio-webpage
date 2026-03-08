@@ -275,6 +275,7 @@ a{
 
 .projectShortText{
     font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 
@@ -292,7 +293,7 @@ a{
 
 .sectionColumn{
     width: 50%;
-    padding: 2%;
+    padding: 3%;
 }
 
 .sectionRowBorder{
