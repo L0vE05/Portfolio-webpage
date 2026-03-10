@@ -268,7 +268,6 @@ a{
 .projectShortBox{
     top: 50vh;
     left: 10vw;
-    display: flex;
     white-space: nowrap;
 }
 
@@ -281,6 +280,24 @@ a{
 .projectShortText{
     font-size: 1.2em;
     line-height: 1.4em;
+}
+
+.projectLinkWrapper{
+    display: flex;
+    margin-top: 1.5vh;
+}
+
+.projectLink{
+    text-decoration: none;
+    margin-left: 0.5vw;
+}
+
+.projectLink:first-of-type{
+    margin-left: 5vw;
+}
+
+.projectLinkIcon{
+    max-width: 2vw;
 }
 
 
