@@ -69,7 +69,7 @@ a{
     display: flex;
     position: fixed;
     top: 0%;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     background-color: rgba(169, 169, 169, 0.85);
     padding-top: 2.5%;
@@ -80,11 +80,16 @@ a{
 
     @media (max-width: 700px) {
         justify-content: space-evenly;
+        display: inherit;
     }
 }
 
 .titleWrapper{
     margin-left: 4.5%;
+
+    @media (max-width: 700px) {
+        text-align: center;
+    }
 }
 
 .myName{
@@ -111,6 +116,11 @@ a{
     justify-content:space-evenly;
     width: 40%;
     margin-top: 0.4%;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        margin-top: 1vh;
+    }
 }
 
 .navText, .projectsButton{
@@ -192,7 +202,7 @@ a{
     }
 
     @media screen and (max-width: 600px) {
-        top: 20vh;
+        top: 15vh;
     }
 }
 
@@ -204,6 +214,10 @@ a{
 
 .aboutText{
     font-size: 1.1em;
+
+    @media (max-width: 700px) {
+        font-size: 0.97em;
+    }
 }
 
 
@@ -262,6 +276,10 @@ a{
     font-size: 1.8em;
     text-decoration: underline;
     transition: 0.4s;
+
+    @media (max-width: 700px) {
+        font-size: 1.6em;
+    }
 }
 
 .projectTags{
@@ -515,17 +533,35 @@ a{
     @media (max-width: 1400px) {
         display: inherit;
     }
+
+    @media (max-width: 700px) {
+        width: 90vw;
+    }
+}
+
+.contactTextArea{
+    text-align: center;
+}
+
+.contactTextWrapper{
+    display: flex;
+}
+
+.contactInfo, .infoText{
+    font-size: 1.1em;
+
+    @media (max-width: 500px) {
+        font-size: 0.9em;
+    }
 }
 
 .contactInfo{
-    font-size: 1.1em;
     margin-bottom: 5%;
     margin-right: 4%;
     color: black;
 }
 
 .infoText{
-    font-size: 1.1em;
     color: black;
     text-decoration: underline;
 }
@@ -538,6 +574,10 @@ a{
         margin: 0 auto;
         margin-top: 2vh;
         width: 70%;
+    }
+
+    @media (max-width: 700px) {
+        width: 50%;
     }
 }
 

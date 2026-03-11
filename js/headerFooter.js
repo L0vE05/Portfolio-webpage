@@ -44,12 +44,12 @@ window.addEventListener('load', function () {
     footer.innerHTML = `
     <h2 class="underline">Contact me</h2>
     <div class="footerContactWrapper">
-        <div>
-            <div class="flex">
+        <div class="contactTextArea">
+            <div class="contactTextWrapper">
                 <p class="contactInfo">Mail:</p>
                 <a class="infoText" href="mailto:love.erlandsson@hotmail.com">love.erlandsson@hotmail.com</a>
             </div>
-            <div class="flex">
+            <div class="contactTextWrapper">
                 <p class="contactInfo">Phone:</p>
                 <p class="infoText">+46 (0)72 557 07 57</p>
             </div>
