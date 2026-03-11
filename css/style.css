@@ -35,6 +35,14 @@ a{
     display: flex;
 }
 
+.flexOnWide{
+    display: flex;
+
+    @media (max-width: 900px) {
+        display: inherit;
+    }
+}
+
 .noDecor{
     text-decoration: none;
 }
@@ -69,6 +77,10 @@ a{
     transition: 0.4s;
     border-bottom-color: rgba(2, 3, 53, 0.85);
     z-index: 5;
+
+    @media (max-width: 700px) {
+        justify-content: space-evenly;
+    }
 }
 
 .titleWrapper{
@@ -79,11 +91,19 @@ a{
     color: white;
     font-size: 2em;
     text-decoration: underline;
+
+    @media (max-width: 700px) {
+        font-size: 1.5em;
+    }
 }
 
 .myTitle{
     color: white;
     font-size: 1.2em;
+
+    @media (max-width: 700px) {
+        font-size: 1em;
+    }
 }
 
 .navBar{
@@ -96,6 +116,10 @@ a{
 .navText, .projectsButton{
     color: white;
     font-size: 1.3em;
+
+    @media (max-width: 700px) {
+        font-size: 1em;
+    }
 }
 
 .projectsButton{
@@ -148,6 +172,10 @@ a{
     filter: blur(2.5px) brightness(92%);
     width: 100vw;
     height: 110vh;
+
+    @media (max-width: 700px) {
+        top: -25vh;
+    }
 }
 
 .introductionWrapper{
@@ -158,6 +186,14 @@ a{
     background-color: rgba(41, 35, 35, 0.781);
     padding: 1%;
     border-radius: 1.5rem;
+
+    @media screen and (max-width: 1400px) {
+        width: 70vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: 20vh;
+    }
 }
 
 .aboutHeader{
@@ -177,6 +213,10 @@ a{
     margin-top: 8vh;
     text-align: center;
     width: 70vw;
+
+    @media (max-width: 600px) {
+        margin-top: -10vh;
+    }
 }
 
 .project{
@@ -190,6 +230,10 @@ a{
     background-color:rgba(41, 35, 35);
     transition: 0.4s;
     cursor: pointer;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 }
 
 .project:hover{
@@ -440,6 +484,10 @@ a{
     width: 40%;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1400px) {
+        display: inherit;
+    }
 }
 
 .contactInfo{
@@ -458,6 +506,12 @@ a{
 .contactLinks{
     width: 30%;
     justify-content: space-evenly;
+
+    @media (max-width: 1400px) {
+        margin: 0 auto;
+        margin-top: 2vh;
+        width: 70%;
+    }
 }
 
 .linkIcon{
