@@ -292,6 +292,12 @@ a{
     margin-top: 1%;
 }
 
+.contributionShort{
+    color: lightgray;
+    font-size: 0.85em;
+    margin-top: 1vh;
+}
+
 
 .bigBoi{
     margin-top: 50%;
