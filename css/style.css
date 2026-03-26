@@ -114,7 +114,7 @@ a{
 .navBar{
     display: flex;
     justify-content:space-evenly;
-    width: 40%;
+    width: 60%;
     margin-top: 0.4%;
 
     @media (max-width: 700px) {
@@ -576,7 +576,7 @@ a{
     background-color: darkgray;
     margin-top: 10vh;
     padding-top: 1.5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 8%;
     text-align: center;
     border-top-style: solid;
     border-top-color:rgba(2, 3, 53, 0.85);

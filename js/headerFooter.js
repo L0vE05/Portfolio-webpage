@@ -12,13 +12,13 @@ window.addEventListener('load', function () {
     header.innerHTML = `
     <div class="titleWrapper">
         <a href="` + ROOT + `index.html" class="noDecor"><h1 class="myName">Love Erlandsson</h1></a>
-        <p class="myTitle">Gameplay Programmer</p>
+        <p class="myTitle">Gameplay & AI Programmer</p>
     </div>
     <div class="navBar">
         <a class="navText" href="` + ROOT + `index.html">Home</a>
         <div>
             <div class="flex">
-                <a class="projectsButton" onclick="toggleDropdown()" id="projDropdownButton">Projects</a>
+                <a class="projectsButton" onClick="toggleDropdown()" id="projDropdownButton">Projects</a>
                 <p style="font-size: 0.5em; margin-top: 5%">▼</p>
             </div>
             <div class="relativeCentered">
@@ -38,6 +38,7 @@ window.addEventListener('load', function () {
                 </div>
             </div>
         </div>
+        <a class="projectsButton" onClick="scrollToFooter()">Contact</a>
         <a class="navText" href="` + ROOT + `aboutMe.html">About me</a>
     </div>`;
 
@@ -104,4 +105,9 @@ function setDropdown(open)
         this.dropdownMenu.style.display = "block";
     else
         this.dropdownMenu.style.display = "none";
+}
+
+function scrollToFooter()
+{
+    window.scrollTo(0, document.body.scrollHeight);
 }
